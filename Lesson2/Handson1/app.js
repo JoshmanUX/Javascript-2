@@ -1,4 +1,4 @@
-import { calculateCircumference } from "./circleCalculator.js";
+import { calculateCircumference, calculateArea } from "./circleCalculator.js";
 document.querySelector("#submitButton").onclick = submitFunction;
 
 import { convertToNumber } from "./validation.js";
@@ -10,4 +10,12 @@ function submitFunction() {
   document.getElementById(
     "output"
   ).innerHTML = `The circumference is: ${circumference}`;
+}
+
+function submitArea () {
+      let radius = parseFloat(document.getElementById("radius").value);
+      let circumference = calculateArea(radius);
+      document.getElementById(
+        "output"
+      ).innerHTML = `The circumference is: ${circumference}`;
 }
